@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+$("load", function () {
     elemekElerese1();
     elemekElerese2();
     elemekElerese3();
@@ -9,19 +9,20 @@ window.addEventListener("load", function () {
 });
 
 function elemekElerese1() {
-    const ELEM = document.querySelectorAll('#f1')[0];
-    console.log(ELEM.innerHTML);
+    const ELEM = $('#f1')
+    console.log("1. feladat: ", ELEM.html());
 }
 
 function elemekElerese2() {
-    const ELEM = document.querySelectorAll('#ide')[0]
-    ELEM.innerHTML = "<p>Jó reggelt!</p>";
+    const ELEM = $('#ide')
+    ELEM.eq(0).html("Jó reggelt!");
 }
 function elemekElerese3() {
-    const ELEM = document.querySelectorAll('.ide')[0]
-    ELEM.innerHTML = "<p>Jó reggelt!</p>";
+    const ELEM = $('.ide')
+    ELEM.eq(0).html("Jó reggelt!");
 }
 function elemekElerese4() {
+    const ELEM = $(".lista")
     let txt = "<ul>";
     for (let index = 0; index < 5; index++) {
         
@@ -29,8 +30,7 @@ function elemekElerese4() {
 }
     txt += "</ul>";
 
-    ELEM = document.getElementsByClassName('lista')[0]
-    ELEM.innerHTML = txt
+    return ELEM.eq(0).html(txt)
 
 }
 function elemekFormazasa1() {
